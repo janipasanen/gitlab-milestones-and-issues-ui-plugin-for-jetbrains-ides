@@ -133,8 +133,8 @@ The distributable ZIP will be in `build/distributions/`.
 
 ## License
 
-[Add your license here]
+This project is licensed under the [MIT License](LICENSE).
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
