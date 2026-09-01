@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idea-plugin>
+    <id>co.anomaly.gitlab-milestones-and-issues</id>
+    <name>GitLab Milestones and Issues UI</name>
+    <vendor email="jani@anomaly.co" url="https://anomaly.co">Anomaly</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="GitLab"
+                    icon="/icons/gitlab.svg"
+                    anchor="right"
+                    factor="first"
+                    implementation="co.anomaly.gitlab.ui.GitLabToolWindowFactory"/>
+
+        <applicationConfigurable parentId="tools"
+                                 instance="co.anomaly.gitlab.settings.GitLabSettingsConfigurable"
+                                 id="co.anomaly.gitlab.settings.GitLabSettings"
+                                 displayName="GitLab"/>
+
+        <applicationService serviceImplementation="co.anomaly.gitlab.settings.GitLabSettings"/>
+    </extensions>
+
+    <actions>
+        <action id="co.anomaly.gitlab.actions.RefreshGitLab"
+                class="co.anomaly.gitlab.actions.RefreshAction"
+                text="Refresh GitLab"
+                description="Refresh GitLab data">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default"
+                              first-keystroke="control R"/>
+        </action>
+    </actions>
+</idea-plugin>

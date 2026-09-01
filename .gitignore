@@ -1,0 +1,18 @@
+# Gradle
+.gradle/
+gradle-build/
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+.intellijPlatform/
+
+# Build artifacts
+build/
+out/
+
+# OS
+.DS_Store
+Thumbs.db
