@@ -9,6 +9,7 @@ A JetBrains plugin that integrates GitLab milestones and issues directly into th
 - Auto-refresh on window open
 - Configurable GitLab server URL and private token
 - Filter to show open milestones only
+- CI/CD pipeline management: view, stop, retry, and cancel pipelines
 
 ## Building the Plugin
 
@@ -106,12 +107,12 @@ After installing the plugin:
 
 ```
 src/
-├── main/kotlin/co/anomaly/gitlab/
+├── main/kotlin/io/phinfotech/gitlab/
 │   ├── actions/       # IDE actions (refresh, create)
 │   ├── api/           # GitLab API client (OkHttp)
-│   ├── models/        # Data classes (Issue, Milestone, Project)
+│   ├── models/        # Data classes (Issue, Milestone, Project, Pipeline)
 │   ├── search/        # Search service
-│   ├── services/      # GitLab services (Issue, Milestone, Project)
+│   ├── services/      # GitLab services (Issue, Milestone, Project, Pipeline)
 │   ├── settings/      # Plugin settings
 │   └── ui/            # UI components (panels, dialogs)
 └── test/kotlin/       # Unit tests
