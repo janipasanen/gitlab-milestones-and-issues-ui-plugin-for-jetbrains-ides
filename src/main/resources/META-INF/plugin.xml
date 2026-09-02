@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <idea-plugin>
-    <id>co.anomaly.gitlab-milestones-and-issues</id>
+    <id>io.phinfotech.gitlab-milestones-and-issues</id>
     <name>GitLab Milestones and Issues UI</name>
-    <vendor email="jani@anomaly.co" url="https://anomaly.co">Anomaly</vendor>
+    <vendor email="jani@phinfotech.io" url="https://phinfotech.io">PH InfoTech</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
@@ -11,19 +11,19 @@
                     icon="/icons/gitlab.svg"
                     anchor="right"
                     factor="first"
-                    implementation="co.anomaly.gitlab.ui.GitLabToolWindowFactory"/>
+                    implementation="io.phinfotech.gitlab.ui.GitLabToolWindowFactory"/>
 
         <applicationConfigurable parentId="tools"
-                                 instance="co.anomaly.gitlab.settings.GitLabSettingsConfigurable"
-                                 id="co.anomaly.gitlab.settings.GitLabSettings"
+                                 instance="io.phinfotech.gitlab.settings.GitLabSettingsConfigurable"
+                                 id="io.phinfotech.gitlab.settings.GitLabSettings"
                                  displayName="GitLab"/>
 
-        <applicationService serviceImplementation="co.anomaly.gitlab.settings.GitLabSettings"/>
+        <applicationService serviceImplementation="io.phinfotech.gitlab.settings.GitLabSettings"/>
     </extensions>
 
     <actions>
-        <action id="co.anomaly.gitlab.actions.RefreshGitLab"
-                class="co.anomaly.gitlab.actions.RefreshAction"
+        <action id="io.phinfotech.gitlab.actions.RefreshGitLab"
+                class="io.phinfotech.gitlab.actions.RefreshAction"
                 text="Refresh GitLab"
                 description="Refresh GitLab data">
             <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>

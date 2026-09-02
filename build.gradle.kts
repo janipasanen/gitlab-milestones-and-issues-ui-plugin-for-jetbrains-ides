@@ -6,7 +6,7 @@ plugins {
     id("org.jetbrains.intellij.platform") version "2.18.1"
 }
 
-group = "co.anomaly"
+group = "io.phinfotech"
 version = "1.0.0"
 
 java {
